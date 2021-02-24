@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery Selector</title>
+  </head>
+  <body>
+    <h1>Kemana kamu ingin pergi?</h1>
+    <ul>
+      <li class="indonesia">Bandung</li>
+      <li>Jogjakarta</li>
+      <li>Jakarta</li>
+    </ul>
+    <button>Aksi</button>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            console.log('jQuery sudah jalan');
+            $('button').click(function() {
+                $('h1').hide();
+                $('li').text('merdeka');
+                $('.indonesia').text('indonesia');
+            })
+        })
+    </script>
+  </body>
+</html>
