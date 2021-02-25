@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery Selector</title>
+  </head>
+  <body>
+    <h1>Kemana Anda ingin pergi ?</h1>
+    <ul class="lokasi">
+      <li class="bandung">Bandung</li>
+      <li class="surabaya"><strong>Surabaya</strong></li>
+      <li>Jakarta</li>
+      <li><input type="text" class="inputan" value="Malang" /></li>
+    </ul>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        // $(".bandung").text("Cimahi");
+        // $(".surabaya").html("<em>Surabaya</em>");
+        $(".inputan").val("Semarang");
+
+        $(".bandung").remove();
+        $(".surabaya").empty();
+      });
+    </script>
+  </body>
+</html>

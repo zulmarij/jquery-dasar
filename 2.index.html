@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery Selector</title>
+  </head>
+  <body>
+    <h1>Kemana kamu ingin pergi?</h1>
+    <ul id="destinations">
+      <li>Bandung</li>
+      <li>Jakarta</li>
+      <ul>
+        <li>Jakarta Pusat</li>
+        <li>Jakarta Utara</li>
+        <li>Jakarta Selatan</li>
+        <li>Jakarta Barat</li>
+        <li class="promo">Jakarta Timur</li>
+      </ul>
+      <li>Surabaya</li>
+      <li>Bali</li>
+      <li id="indonesia">Indonesia</li>
+    </ul>
+    <button>Aksi</button>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          // Mencari elemen tertentu
+          // $("#destinations li").css("background-color", "yellow");
+
+          //Mencari elemen child
+          // $("#destinations  > li").css("background-color", "yellow");
+
+          // Mencari elemen lebih dari satu
+          // $(".promo, #indonesia").css("background-color", "yellow");
+
+          // Memilih elemen pertama atau elemen terakhir
+          // $("#destinations li:first").css("background-color", "yellow");
+          // $("#destinations li:last").css("background-color", "green");
+
+          //Memilih elemen ganjil atau genap 
+          $("#destinations li:odd").css("background-color", "blue");
+          $("#destinations li:even").css("background-color", "yellow");
+        });
+      });
+    </script>
+  </body>
+</html>
