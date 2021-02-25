@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menggunakan Library Untuk Jquery</title>
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="slick-1.8.1/slick/slick-theme.css" />
+  </head>
+  <body>
+    <div class="your-class">
+      <div>
+        <h1>Lorem Ipsum</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi repellat
+          cupiditate voluptas earum delectus, aliquid optio quo nostrum
+          quisquam? Culpa dignissimos veniam perspiciatis ad ratione quidem
+          quasi repudiandae quis qui.
+        </p>
+      </div>
+      <div>
+        <h1>Lorem Ipsum</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi repellat
+          cupiditate voluptas earum delectus, aliquid optio quo nostrum
+          quisquam? Culpa dignissimos veniam perspiciatis ad ratione quidem
+          quasi repudiandae quis qui.
+        </p>
+      </div>
+      <div>
+        <h1>Lorem Ipsum</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi repellat
+          cupiditate voluptas earum delectus, aliquid optio quo nostrum
+          quisquam? Culpa dignissimos veniam perspiciatis ad ratione quidem
+          quasi repudiandae quis qui.
+        </p>
+      </div>
+    </div>
+    <button class="JPO_open">Open popup</button>
+    <div id="JPO">
+      {{ Popup Content }}
+      <!-- Add a button to close the popup (optional) -->
+      <button class="JPO_close">Close</button>
+    </div>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="slick-1.8.1/slick/slick.min.js"></script>
+    <script src="jquery-popup-overlay/jquery.popupoverlay.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".your-class").slick();
+
+        $("#JPO").popup();
+      });
+    </script>
+  </body>
+</html>
