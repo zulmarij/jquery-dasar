@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memanipulasi CSS Dalam Jquery</title>
+    <style>
+      .merah {
+        color: red;
+      }
+      .biru {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kemana Anda ingin pergi ?</h1>
+    <ul class="lokasi">
+      <li class="bandung">Bandung</li>
+      <li class="surabaya">Surabaya</li>
+      <li class="jakarta">Jakarta</li>
+    </ul>
+    <button id="bandungBiru">Bandung Biru!</button>
+    <button id="bandungMerah">Bandung Merah!</button>
+    <button id="bandungBesar">Bandung Besar!</button>
+    <button id="bandungKecil">Bandung Kecil!</button>
+    <script src="jquery-3.5.1.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('#bandungBiru').on('click', function () {
+          $('.bandung').removeClass('merah');
+          $('.bandung').addClass('biru');
+        });
+        $('#bandungMerah').on('click', function () {
+          $('.bandung').removeClass('biru');
+          $('.bandung').addClass('merah');
+        });
+        $('#bandungBesar').on('click', function () {
+          $('.bandung').animate({
+            fontSize: 50
+          });
+        });
+        $('#bandungKecil').on('click', function () {
+          $('.bandung').animate({
+            fontSize: 16
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
